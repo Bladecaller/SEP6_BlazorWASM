@@ -1,0 +1,54 @@
+﻿@page "/actors"
+@inject SingletonService actorInput
+@inject HttpClient client
+@using System.Net.Http
+<h1>ActorSearch</h1>
+
+
+@if (actors == null)
+{
+    <p><em>Search for an actor</em></p>
+
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Popularity</th>
+                @*<th>Image</th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ActorItem actorItem in actors)
+            {
+                <tr>
+                    <td>@actorItem.name</td>        
+                    <td>@actorItem.popularity</td>
+                    @*<td>@actorItem.file_path</td>*@
+                    @*<td><img src=@actorItem.file_path alt="alternatetext" style="width:350px;height:400px;"></td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    private string apiKey = "72d7decec4b08474aef457cd18c51628";
+    private ActorItem actor;
+    private Groot groot;
+    private IEnumerable<ActorItem> actors;
+    protected override async Task OnInitializedAsync()
+    {
+        if (actorInput.GetSearchInput() != null)
+        {
+            groot = await client.GetFromJsonAsync<Groot>("https://api.themoviedb.org/3/search/person?api_key="+ apiKey +"&query=" + actorInput.GetSearchInput());
+            actors = groot.results;
+            //foreach (ActorItem actor in actors)
+            //{
+            //    actor.file_path = "" + actor.file_path;
+            //}
+
+        }
+    }
+}

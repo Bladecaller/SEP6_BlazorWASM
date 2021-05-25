@@ -1,0 +1,36 @@
+@page "/actor"
+@inject SingletonService searchInput
+@using System.Net.Http
+<h1>Actor</h1>
+<ul>
+    @foreach (MovieItem movie in movies)
+    {
+        <li>@movie.Title</li>
+        <li>Rate : @movie.PersonalRate </li>
+        <li>Rate this : <input type="range" @bind-value=@movie.PersonalRate min="0" max="5" /></li>
+    }
+</ul>
+<button @onclick="AddInitialMovie">Add first movie</button>
+<button @onclick="AddSecondMovie">Add second movie</button>
+
+@code {
+    private List<MovieItem> movies = new();
+    private void AddInitialMovie()
+    {
+        MovieItem D = new();
+        D.Title = "Tenacious D";
+        D.release_Date = "2003";
+        D.original_language = "US";
+        D.PersonalRate = 0;
+        movies.Add(D);
+    }
+    private void AddSecondMovie()
+    {
+        MovieItem D = new();
+        D.Title = "Jackass";
+        D.release_Date = "2003";
+        D.original_language = "DK";
+        D.PersonalRate = 0;
+        movies.Add(D);
+    }
+}

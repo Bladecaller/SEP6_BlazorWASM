@@ -1,0 +1,60 @@
+﻿@inject SingletonService searchInput
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">MAYBE LOGO HERE</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="@NavMenuCssClass navbar-collapse">
+        <a style="color:rebeccapurple"
+            <NavLink class="nav-link" href="movie" Match="NavLinkMatch.All">
+                <span class="oi oi-monitor" style="color:red" aria-hidden="true"></span> <span style="color:red">Movies</span>
+            </NavLink>
+        </a>
+        <a
+            <NavLink class="nav-link" href="actor">
+                <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Actors</span>
+            </NavLink>
+        </a>
+        <a
+            <NavLink class="nav-link" href="my_list">
+               <span class="oi oi-list-rich"style="color:red" aria-hidden="true"></span> <span style="color:red">My list</span>
+            </NavLink>
+        </a>
+        <a
+            <NavLink class="nav-link" href="actors">
+                <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">ActorSearch</span>
+            </NavLink>
+        </a>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button">
+                Genre
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Drama</a>
+                <a class="dropdown-item" href="#">Comedy</a>
+                <a class="dropdown-item" href="#">Fuck</a>
+            </div>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <input @bind="state.ValueInput" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Is this working?">
+            <button @onclick="SetValue" class="btn btn-outline-light my-2 my-sm-3" type="submit">Find</button>
+        </form>
+    </div>
+</nav>
+
+@code {
+    [CascadingParameter] public Cascade state {get; set;}
+    public string InputValue { get; set; }
+    private bool collapseNavMenu = true;
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+    private void SetValue(){
+        state.ValueInput = "jack";
+        Console.WriteLine("Value has been set to " + state.ValueInput);
+    }
+}

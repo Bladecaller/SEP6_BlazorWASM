@@ -114,6 +114,14 @@ using System.Net.Http;
 #nullable restore
 #line 36 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\ActorSearch.razor"
        
+    async Task Refresh()
+    {
+        if(actorInput.GetSearchInput() != null ){
+        groot = await client.GetFromJsonAsync<Groot>("https://api.themoviedb.org/3/search/person?api_key="+ apiKey + "&query=" + actorInput.GetSearchInput());
+        actors = groot.results;
+        }
+    StateHasChanged();
+    }
     private string apiKey = "72d7decec4b08474aef457cd18c51628";
     private ActorItem actor;
     private Groot groot;
@@ -124,11 +132,6 @@ using System.Net.Http;
         {
             groot = await client.GetFromJsonAsync<Groot>("https://api.themoviedb.org/3/search/person?api_key="+ apiKey +"&query=" + actorInput.GetSearchInput());
             actors = groot.results;
-            //foreach (ActorItem actor in actors)
-            //{
-            //    actor.file_path = "" + actor.file_path;
-            //}
-
         }
     }
 

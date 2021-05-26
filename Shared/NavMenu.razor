@@ -1,7 +1,7 @@
 ﻿@inject SingletonService searchInput
 @inject NavigationManager uriHelper
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="index">MAYBE LOGO HERE</a>
+    <a class="navbar-brand" href="/SEP6_BlazorWASM">MAYBE LOGO HERE</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,8 +39,8 @@
         </div>
         <div>
             <input @bind="InputValue" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Is this working?">
-            <button @onclick="SetValue" class="btn btn-outline-light my-2 my-sm-3" type="submit">Find</button>
         </div>
+            <button @onclick="SetValue" class="btn btn-outline-light my-2 my-sm-3" type="submit">Find</button>
     </div>
 </nav>
 

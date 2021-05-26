@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B1UmkKy4nyqvP+Y+Wte5zktf3d7MrlRp+cxCTMkQdyurPHBL5knu3gXOUPrJMqnjSUB5bmvxgQOCrcUM2DRJFg==",
+  "dgSpecHash": "mpTS5SfwkvwnLOwE8PNBt1QJ97imCk2uJBhheUira4xoWPvgHuiBlJorBiYNN5a3jUvdSMAPPXL5iVj0jkrCuQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Borislav\\Documents\\Blazor\\BlazorWASM\\BlazorWASM.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,10 @@
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.components.web\\5.0.6\\microsoft.aspnetcore.components.web.5.0.6.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\5.0.6\\microsoft.aspnetcore.components.webassembly.5.0.6.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\5.0.6\\microsoft.aspnetcore.components.webassembly.devserver.5.0.6.nupkg.sha512",
+    "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
+    "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.6\\microsoft.aspnetcore.metadata.5.0.6.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
@@ -29,9 +33,12 @@
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.jsinterop\\5.0.6\\microsoft.jsinterop.5.0.6.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.6\\microsoft.jsinterop.webassembly.5.0.6.nupkg.sha512",
+    "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Borislav\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\Borislav\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\Borislav\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.6\\microsoft.netcore.app.runtime.browser-wasm.5.0.6.nupkg.sha512"
   ],
   "logs": []

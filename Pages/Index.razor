@@ -1,14 +1,15 @@
 @inject HttpClient client
 @using Newtonsoft.Json
+@using System.Net.Http.Headers
 @inject SingletonService searchInput
 @using System.Net.Http
 @page "/"
 
 <h1>Log in</h1>
 <ul>
-    <li>
-        <input placeholder="Username"/>
+    <li>        
         <button @onclick=@Refresh>UpdateSearch</button>
+        <input placeholder="Username"/>
     </li>
     <li>
         <input placeholder="Password"/>
@@ -22,7 +23,13 @@
     HttpContent content;
     async Task Refresh()
     {
-     await client.PostAsync("https://postman-echo.com/post", content);    
+     HttpResponseMessage response = await client.PostAsync("https://ptsv2.com/t/nrph0-1622069235/post", content);
+     HttpContent responseContent = response.Content;
+     string myResponse = await content.ReadAsStringAsync();
+     HttpContentHeaders headers = content.Headers;
+     Console.WriteLine(myResponse);
+     Console.WriteLine(headers);
+     //Console.WriteLine("Tried sending " + content);    
      }
     
     protected override void OnInitialized()

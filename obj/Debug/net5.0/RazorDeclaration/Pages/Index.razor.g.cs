@@ -104,7 +104,14 @@ using Newtonsoft.Json;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
+#line 3 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
+using System.Net.Http.Headers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
 using System.Net.Http;
 
 #line default
@@ -119,7 +126,7 @@ using System.Net.Http;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 18 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
+#line 19 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
       
     MovieItem movie;
 
@@ -127,7 +134,13 @@ using System.Net.Http;
     HttpContent content;
     async Task Refresh()
     {
-     await client.PostAsync("https://postman-echo.com/post", content);    
+     HttpResponseMessage response = await client.PostAsync("https://ptsv2.com/t/nrph0-1622069235/post", content);
+     HttpContent responseContent = response.Content;
+     string myResponse = await content.ReadAsStringAsync();
+     HttpContentHeaders headers = content.Headers;
+     Console.WriteLine(myResponse);
+     Console.WriteLine(headers);
+     //Console.WriteLine("Tried sending " + content);    
      }
     
     protected override void OnInitialized()

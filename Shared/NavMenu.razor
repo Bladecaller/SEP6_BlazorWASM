@@ -1,28 +1,28 @@
 ﻿@inject SingletonService searchInput
 @inject NavigationManager uriHelper
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">MAYBE LOGO HERE</a>
+    <a class="navbar-brand" href="/SEP6_BlazorWASM">MAYBE LOGO HERE</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="@NavMenuCssClass navbar-collapse">
         <a style="color:rebeccapurple"
-            <NavLink class="nav-link" href="/movieSearch" Match="NavLinkMatch.All">
+            <NavLink class="nav-link" href="/SEP6_BlazorWASM/movieSearch" Match="NavLinkMatch.All">
                 <span class="oi oi-monitor" style="color:red" aria-hidden="true"></span> <span style="color:red">Movies</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="/random">
+            <NavLink class="nav-link" href="/SEP6_BlazorWASM/random">
                 <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Random</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="/myList">
+            <NavLink class="nav-link" href="/SEP6_BlazorWASM/myList">
                <span class="oi oi-list-rich"style="color:red" aria-hidden="true"></span> <span style="color:red">My list</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="/actorSearch">
+            <NavLink class="nav-link" href="/SEP6_BlazorWASM/actorSearch">
                 <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Actors</span>
             </NavLink>
         </a>

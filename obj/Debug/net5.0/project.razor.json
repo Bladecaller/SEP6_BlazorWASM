@@ -319,68 +319,35 @@
         }
       },
       {
-        "HashCode": 1861840644,
+        "HashCode": 1066613019,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Index",
+        "Name": "BlazorWASM.Pages.ActorSearch",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "ActorSearch"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Index"
+          "Common.TypeName": "BlazorWASM.Pages.ActorSearch"
         }
       },
       {
-        "HashCode": -1330898695,
+        "HashCode": -744145774,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Index",
+        "Name": "BlazorWASM.Pages.ActorSearch",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWASM.Pages.Index"
+            "TagName": "BlazorWASM.Pages.ActorSearch"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 449100917,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.MovieSearch",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MovieSearch"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.MovieSearch"
-        }
-      },
-      {
-        "HashCode": -1878210181,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.MovieSearch",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Pages.MovieSearch"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.MovieSearch",
+          "Common.TypeName": "BlazorWASM.Pages.ActorSearch",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -451,35 +418,68 @@
         }
       },
       {
-        "HashCode": 1066613019,
+        "HashCode": 449100917,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.ActorSearch",
+        "Name": "BlazorWASM.Pages.MovieSearch",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ActorSearch"
+            "TagName": "MovieSearch"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.ActorSearch"
+          "Common.TypeName": "BlazorWASM.Pages.MovieSearch"
         }
       },
       {
-        "HashCode": -744145774,
+        "HashCode": -1878210181,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.ActorSearch",
+        "Name": "BlazorWASM.Pages.MovieSearch",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWASM.Pages.ActorSearch"
+            "TagName": "BlazorWASM.Pages.MovieSearch"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.ActorSearch",
+          "Common.TypeName": "BlazorWASM.Pages.MovieSearch",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1861840644,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Index",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Index"
+        }
+      },
+      {
+        "HashCode": -1330898695,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Index",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

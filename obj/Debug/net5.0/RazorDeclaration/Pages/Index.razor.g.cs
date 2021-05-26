@@ -13,13 +13,6 @@ namespace BlazorWASM.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\_Imports.razor"
-using System.Net.Http;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 2 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\_Imports.razor"
 using System.Net.Http.Json;
 
@@ -103,6 +96,20 @@ using Microsoft.AspNetCore.Components.Authorization;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
+using System.Net.Http;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -111,6 +118,38 @@ using Microsoft.AspNetCore.Components.Authorization;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 18 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
+      
+    MovieItem movie;
+
+    string stringPayload;
+    HttpContent content;
+    async Task Refresh()
+    {
+     await client.PostAsync("https://postman-echo.com/post", content);    
+     }
+    
+    protected override void OnInitialized()
+    {
+        movie = new MovieItem{   
+        Title = "movie title",
+        release_Date = "Vchera",
+        original_language = "english",
+        popularity = 3.1,
+        poster_path = "path",
+        fullImagePath = "fullPath",
+        PersonalRate = 2
+        };
+        stringPayload = JsonConvert.SerializeObject(movie);
+        content = new StringContent(stringPayload);
+    }
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private SingletonService searchInput { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient client { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -111,9 +111,8 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
+#line 46 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
        
-    public string urlPath;
     public string InputValue { get; set; }
     private bool collapseNavMenu = true;
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
@@ -126,15 +125,10 @@ using Microsoft.AspNetCore.Components.Authorization;
         searchInput.SetSearchInput(InputValue);
         Console.WriteLine("Value has been set to " + searchInput.GetSearchInput());
     }
-     protected override void OnInitialized()
-    {
-        urlPath = searchInput.pathForPages;
-    }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager uriHelper { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private SingletonService searchInput { get; set; }
     }
 }

@@ -641,3 +641,6 @@ C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\Pages\MovieSearch.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\MovieSearch.razor.g.cs
+C:\Users\Borislav\Documents\Blazor\BlazorWASM\bin\Debug\net5.0\wwwroot\_framework\Newtonsoft.Json.dll.gz
+C:\Users\Borislav\Documents\Blazor\BlazorWASM\bin\Debug\net5.0\wwwroot\_framework\Newtonsoft.Json.dll
+C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\build-gz\HkK2wd8y.gz

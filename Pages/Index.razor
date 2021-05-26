@@ -1,11 +1,42 @@
+@inject HttpClient client
+@using Newtonsoft.Json
+@inject SingletonService searchInput
+@using System.Net.Http
 @page "/"
 
 <h1>Log in</h1>
 <ul>
     <li>
         <input placeholder="Username"/>
+        <button @onclick=@Refresh>UpdateSearch</button>
     </li>
     <li>
         <input placeholder="Password"/>
     </li>
 </ul>
+
+@code{
+    MovieItem movie;
+
+    string stringPayload;
+    HttpContent content;
+    async Task Refresh()
+    {
+     await client.PostAsync("https://postman-echo.com/post", content);    
+     }
+    
+    protected override void OnInitialized()
+    {
+        movie = new MovieItem{   
+        Title = "movie title",
+        release_Date = "Vchera",
+        original_language = "english",
+        popularity = 3.1,
+        poster_path = "path",
+        fullImagePath = "fullPath",
+        PersonalRate = 2
+        };
+        stringPayload = JsonConvert.SerializeObject(movie);
+        content = new StringContent(stringPayload);
+    }
+}

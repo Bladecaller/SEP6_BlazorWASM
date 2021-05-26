@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Components;
 public class SingletonService{
     private string searchInput;
 
+    public string pathForPages= "SEP6_BlazorWASM/";
+
     private List<MovieItem> movies;
     public string GetSearchInput(){
         return searchInput;

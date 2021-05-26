@@ -104,39 +104,6 @@
         }
       },
       {
-        "HashCode": 140517125,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.NavMenu",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 225472992,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.NavMenu",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1556187829,
         "Kind": "Components.Component",
         "Name": "BlazorWASM.Shared.SurveyPrompt",
@@ -319,6 +286,39 @@
         }
       },
       {
+        "HashCode": 140517125,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.NavMenu",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 225472992,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.NavMenu",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1861840644,
         "Kind": "Components.Component",
         "Name": "BlazorWASM.Pages.Index",
@@ -348,39 +348,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorWASM.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1066613019,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.ActorSearch",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ActorSearch"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.ActorSearch"
-        }
-      },
-      {
-        "HashCode": -744145774,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.ActorSearch",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Pages.ActorSearch"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.ActorSearch",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -418,6 +385,39 @@
         }
       },
       {
+        "HashCode": 1340316945,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Random",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Random"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Random"
+        }
+      },
+      {
+        "HashCode": -1727480426,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Random",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Pages.Random"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Random",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -2002302177,
         "Kind": "Components.Component",
         "Name": "BlazorWASM.Pages.MyList",
@@ -451,35 +451,35 @@
         }
       },
       {
-        "HashCode": 1340316945,
+        "HashCode": 1066613019,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Random",
+        "Name": "BlazorWASM.Pages.ActorSearch",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Random"
+            "TagName": "ActorSearch"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Random"
+          "Common.TypeName": "BlazorWASM.Pages.ActorSearch"
         }
       },
       {
-        "HashCode": -1727480426,
+        "HashCode": -744145774,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Random",
+        "Name": "BlazorWASM.Pages.ActorSearch",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWASM.Pages.Random"
+            "TagName": "BlazorWASM.Pages.ActorSearch"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Random",
+          "Common.TypeName": "BlazorWASM.Pages.ActorSearch",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

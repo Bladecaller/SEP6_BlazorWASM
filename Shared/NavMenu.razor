@@ -1,7 +1,7 @@
 ﻿@inject SingletonService searchInput
 @inject NavigationManager uriHelper
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="/SEP6_BlazorWASM">MAYBE LOGO HERE</a>
+    <a class="navbar-brand" href="/SEP6_BlazorWASM/">MAYBE LOGO HERE</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,6 +45,7 @@
 </nav>
 
 @code {
+    public string urlPath;
     public string InputValue { get; set; }
     private bool collapseNavMenu = true;
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
@@ -56,5 +57,9 @@
     private void SetValue(){
         searchInput.SetSearchInput(InputValue);
         Console.WriteLine("Value has been set to " + searchInput.GetSearchInput());
+    }
+     protected override void OnInitialized()
+    {
+        urlPath = searchInput.pathForPages;
     }
 }

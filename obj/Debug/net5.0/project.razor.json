@@ -8,188 +8,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -421555695,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.Nested",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Nested"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.Nested"
-        }
-      },
-      {
-        "HashCode": -551337086,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.Nested",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Shared.Nested"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.Nested",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1556187829,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.SurveyPrompt",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.SurveyPrompt"
-        }
-      },
-      {
-        "HashCode": 1480900569,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.SurveyPrompt",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 759954654,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.Test",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Test"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.Test"
-        }
-      },
-      {
-        "HashCode": 402842186,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.Test",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Shared.Test"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.Test",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 949097647,
-        "Kind": "Components.ChildContent",
-        "Name": "BlazorWASM.Shared.Test.Body",
-        "AssemblyName": "BlazorWASM",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "Test"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "BlazorWASM.Shared.Test.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
-        }
-      },
-      {
-        "HashCode": -1491037197,
-        "Kind": "Components.ChildContent",
-        "Name": "BlazorWASM.Shared.Test.Body",
-        "AssemblyName": "BlazorWASM",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "BlazorWASM.Shared.Test"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "BlazorWASM.Shared.Test.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1977013498,
         "Kind": "Components.Component",
         "Name": "BlazorWASM.Shared.MainLayout",
@@ -319,6 +137,221 @@
         }
       },
       {
+        "HashCode": 1556187829,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.SurveyPrompt",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.SurveyPrompt"
+        }
+      },
+      {
+        "HashCode": 1480900569,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.SurveyPrompt",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Shared.SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.SurveyPrompt",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -421555695,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.Nested",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Nested"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.Nested"
+        }
+      },
+      {
+        "HashCode": -551337086,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.Nested",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Shared.Nested"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.Nested",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 759954654,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.Test",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Test"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.Test"
+        }
+      },
+      {
+        "HashCode": 402842186,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Shared.Test",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Shared.Test"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Shared.Test",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 949097647,
+        "Kind": "Components.ChildContent",
+        "Name": "BlazorWASM.Shared.Test.Body",
+        "AssemblyName": "BlazorWASM",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "Test"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "BlazorWASM.Shared.Test.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -1491037197,
+        "Kind": "Components.ChildContent",
+        "Name": "BlazorWASM.Shared.Test.Body",
+        "AssemblyName": "BlazorWASM",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "BlazorWASM.Shared.Test"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "BlazorWASM.Shared.Test.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1861840644,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Index",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Index"
+        }
+      },
+      {
+        "HashCode": -1330898695,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Index",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1066613019,
         "Kind": "Components.Component",
         "Name": "BlazorWASM.Pages.ActorSearch",
@@ -385,39 +418,6 @@
         }
       },
       {
-        "HashCode": 1340316945,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Random",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Random"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Random"
-        }
-      },
-      {
-        "HashCode": -1727480426,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Random",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Pages.Random"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Random",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -2002302177,
         "Kind": "Components.Component",
         "Name": "BlazorWASM.Pages.MyList",
@@ -451,35 +451,35 @@
         }
       },
       {
-        "HashCode": 1861840644,
+        "HashCode": 1340316945,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Index",
+        "Name": "BlazorWASM.Pages.Random",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "Random"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Index"
+          "Common.TypeName": "BlazorWASM.Pages.Random"
         }
       },
       {
-        "HashCode": -1330898695,
+        "HashCode": -1727480426,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Index",
+        "Name": "BlazorWASM.Pages.Random",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWASM.Pages.Index"
+            "TagName": "BlazorWASM.Pages.Random"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Index",
+          "Common.TypeName": "BlazorWASM.Pages.Random",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

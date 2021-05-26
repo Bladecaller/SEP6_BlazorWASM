@@ -6,23 +6,23 @@
     </button>
     <div class="@NavMenuCssClass navbar-collapse">
         <a style="color:rebeccapurple"
-            <NavLink class="nav-link" href="movie" Match="NavLinkMatch.All">
+            <NavLink class="nav-link" href="movieSearch" Match="NavLinkMatch.All">
                 <span class="oi oi-monitor" style="color:red" aria-hidden="true"></span> <span style="color:red">Movies</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="actor">
-                <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Actors</span>
+            <NavLink class="nav-link" href="random">
+                <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Random</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="my_list">
+            <NavLink class="nav-link" href="myList">
                <span class="oi oi-list-rich"style="color:red" aria-hidden="true"></span> <span style="color:red">My list</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="actors">
-                <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">ActorSearch</span>
+            <NavLink class="nav-link" href="actorSearch">
+                <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Actors</span>
             </NavLink>
         </a>
         <div class="dropdown show">
@@ -36,10 +36,10 @@
                 <a class="dropdown-item" href="#">Fuck</a>
             </div>
         </div>
-        <form class="form-inline my-2 my-lg-0">
+        <div>
             <input @bind="state.ValueInput" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Is this working?">
             <button @onclick="SetValue" class="btn btn-outline-light my-2 my-sm-3" type="submit">Find</button>
-        </form>
+        </div>
     </div>
 </nav>
 

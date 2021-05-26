@@ -1,4 +1,4 @@
-﻿@page "/movieSearch"
+﻿@page "/myList"
 @inject SingletonService searchInput
 @inject HttpClient client
 @using System.Net.Http
@@ -36,8 +36,8 @@ else
 
 @code {
     [CascadingParameter] public Cascade state {get; set;}
-    private Root root = new();
-    private List<MovieItem> movies = new();
+    private Root root;
+    private IEnumerable<MovieItem> movies;
     protected override async Task OnInitializedAsync()
     {
         if(state.ValueInput != null ){

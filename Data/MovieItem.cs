@@ -14,10 +14,7 @@ public class MovieItem
     public class Root
     {
         public int page { get; set; }
-        public IEnumerable<MovieItem> results { get; set; }
-
-    public IEnumerable<ActorItem> items { get; set; }
-
-    public int total_pages { get; set; }
+        public List<MovieItem> results { get; set; }
+        public int total_pages { get; set; }
         public int total_results { get; set; }
     }

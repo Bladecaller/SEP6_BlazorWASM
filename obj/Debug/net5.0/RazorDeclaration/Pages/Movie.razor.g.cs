@@ -103,7 +103,7 @@ using System.Net.Http;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/movie")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/movieSearch")]
     public partial class Movie : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -115,8 +115,8 @@ using System.Net.Http;
 #line 37 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Movie.razor"
        
     [CascadingParameter] public Cascade state {get; set;}
-    private Root root;
-    private IEnumerable<MovieItem> movies;
+    private Root root = new();
+    private List<MovieItem> movies = new();
     protected override async Task OnInitializedAsync()
     {
         if(state.ValueInput != null ){

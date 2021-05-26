@@ -24,12 +24,8 @@
     async Task Refresh()
     {
      HttpResponseMessage response = await client.PostAsync("https://ptsv2.com/t/nrph0-1622069235/post", content);
-     HttpContent responseContent = response.Content;
-     string myResponse = await content.ReadAsStringAsync();
-     HttpContentHeaders headers = content.Headers;
+     var myResponse = await response.Content.ReadAsStringAsync();
      Console.WriteLine(myResponse);
-     Console.WriteLine(headers);
-     //Console.WriteLine("Tried sending " + content);    
      }
     
     protected override void OnInitialized()

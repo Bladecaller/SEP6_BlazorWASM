@@ -111,9 +111,8 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 46 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
+#line 47 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
        
-    [CascadingParameter] public Cascade state {get; set;}
     public string InputValue { get; set; }
     private bool collapseNavMenu = true;
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
@@ -123,13 +122,14 @@ using Microsoft.AspNetCore.Components.Authorization;
         collapseNavMenu = !collapseNavMenu;
     }
     private void SetValue(){
-        state.ValueInput = "jack";
-        Console.WriteLine("Value has been set to " + state.ValueInput);
+        searchInput.SetSearchInput(InputValue);
+        Console.WriteLine("Value has been set to " + searchInput.GetSearchInput());
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager uriHelper { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private SingletonService searchInput { get; set; }
     }
 }

@@ -2,51 +2,7 @@
 @inject SingletonService searchInput
 @inject HttpClient client
 @using System.Net.Http
-<h1>Movie</h1>
-
-@if (searchInput.GetSearchInput() == null)
-{
-    <p><em>Look for a movie via the search bar! @state.ValueInput</em></p>
-}
-else
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Release date</th>
-                <th>Original language</th>
-                <th>Popularity</th>
-                <th>Poster</th>   
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (MovieItem movieItem in movies){
-                <tr>
-                    <td>@movieItem.Title</td>
-                    <td>@movieItem.release_Date</td>
-                    <td>@movieItem.original_language</td>
-                    <td>@movieItem.popularity</td>
-                    <td><img src=@movieItem.fullImagePath alt="alternatetext" style="width:350px;height:400px;"></td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+<h1>My list</h1>
 
 @code {
-    [CascadingParameter] public Cascade state {get; set;}
-    private Root root;
-    private IEnumerable<MovieItem> movies;
-    protected override async Task OnInitializedAsync()
-    {
-        if(state.ValueInput != null ){
-        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ state.Key + "&query=" + state.ValueInput);
-        movies = root.results;
-        Console.WriteLine("Input is set to: " + state.ValueInput);
-            foreach (MovieItem movie in movies){
-                movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
-            }
-        }
-    }
 }

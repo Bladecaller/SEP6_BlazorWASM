@@ -1,12 +1,13 @@
 ﻿@page "/movieSearch"
+@inject NavigationManager uriHelper
 @inject SingletonService searchInput
 @inject HttpClient client
 @using System.Net.Http
 <h1>Movie</h1>
-
+<button @onclick=@Refresh>UpdateSearch</button>
 @if (searchInput.GetSearchInput() == null)
 {
-    <p><em>Look for a movie via the search bar! @state.ValueInput</em></p>
+    <p><em>Look for a movie via the search bar!</em></p>
 }
 else
 {
@@ -35,15 +36,27 @@ else
 }
 
 @code {
-    [CascadingParameter] public Cascade state {get; set;}
+    async Task Refresh()
+    {
+        if(searchInput.GetSearchInput() != null ){
+        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.GetSearchInput());
+        movies = root.results;
+        Console.WriteLine("Input is set to: " + searchInput.GetSearchInput());
+            foreach (MovieItem movie in movies){
+                movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+            }
+        }
+    StateHasChanged();
+    }
+    private string key = "72d7decec4b08474aef457cd18c51628";
     private Root root = new();
     private List<MovieItem> movies = new();
     protected override async Task OnInitializedAsync()
     {
-        if(state.ValueInput != null ){
-        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ state.Key + "&query=" + state.ValueInput);
+        if(searchInput.GetSearchInput() != null ){
+        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.GetSearchInput());
         movies = root.results;
-        Console.WriteLine("Input is set to: " + state.ValueInput);
+        Console.WriteLine("Input is set to: " + searchInput.GetSearchInput());
             foreach (MovieItem movie in movies){
                 movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             }

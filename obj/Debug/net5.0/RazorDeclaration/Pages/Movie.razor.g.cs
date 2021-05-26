@@ -97,7 +97,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Movie.razor"
+#line 5 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Movie.razor"
 using System.Net.Http;
 
 #line default
@@ -112,17 +112,29 @@ using System.Net.Http;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Movie.razor"
+#line 38 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Movie.razor"
        
-    [CascadingParameter] public Cascade state {get; set;}
+    async Task Refresh()
+    {
+        if(searchInput.GetSearchInput() != null ){
+        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.GetSearchInput());
+        movies = root.results;
+        Console.WriteLine("Input is set to: " + searchInput.GetSearchInput());
+            foreach (MovieItem movie in movies){
+                movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+            }
+        }
+    StateHasChanged();
+    }
+    private string key = "72d7decec4b08474aef457cd18c51628";
     private Root root = new();
     private List<MovieItem> movies = new();
     protected override async Task OnInitializedAsync()
     {
-        if(state.ValueInput != null ){
-        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ state.Key + "&query=" + state.ValueInput);
+        if(searchInput.GetSearchInput() != null ){
+        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.GetSearchInput());
         movies = root.results;
-        Console.WriteLine("Input is set to: " + state.ValueInput);
+        Console.WriteLine("Input is set to: " + searchInput.GetSearchInput());
             foreach (MovieItem movie in movies){
                 movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             }
@@ -134,6 +146,7 @@ using System.Net.Http;
 #nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient client { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private SingletonService searchInput { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager uriHelper { get; set; }
     }
 }
 #pragma warning restore 1591

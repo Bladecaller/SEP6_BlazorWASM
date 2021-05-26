@@ -630,8 +630,6 @@ C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\ActorSearch.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\Movie.razor.g.cs
-C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\Shared\Cascade.razor.g.cs
-C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Shared\Cascade.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\Shared\Nested.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Shared\Nested.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz

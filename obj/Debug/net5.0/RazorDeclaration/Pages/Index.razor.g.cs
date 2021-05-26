@@ -103,7 +103,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/SEP6_BlazorWASM")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/SEP6_BlazorWASMLogin")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

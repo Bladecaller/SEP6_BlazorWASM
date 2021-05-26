@@ -253,39 +253,6 @@
         }
       },
       {
-        "HashCode": 140517125,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.NavMenu",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 225472992,
-        "Kind": "Components.Component",
-        "Name": "BlazorWASM.Shared.NavMenu",
-        "AssemblyName": "BlazorWASM",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorWASM.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -421555695,
         "Kind": "Components.Component",
         "Name": "BlazorWASM.Shared.Nested",
@@ -319,35 +286,35 @@
         }
       },
       {
-        "HashCode": 1861840644,
+        "HashCode": 140517125,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Index",
+        "Name": "BlazorWASM.Shared.NavMenu",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Index"
+          "Common.TypeName": "BlazorWASM.Shared.NavMenu"
         }
       },
       {
-        "HashCode": -1330898695,
+        "HashCode": 225472992,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Index",
+        "Name": "BlazorWASM.Shared.NavMenu",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWASM.Pages.Index"
+            "TagName": "BlazorWASM.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Index",
+          "Common.TypeName": "BlazorWASM.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -385,35 +352,35 @@
         }
       },
       {
-        "HashCode": 1340316945,
+        "HashCode": -2002302177,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Random",
+        "Name": "BlazorWASM.Pages.MyList",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Random"
+            "TagName": "MyList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Random"
+          "Common.TypeName": "BlazorWASM.Pages.MyList"
         }
       },
       {
-        "HashCode": -1727480426,
+        "HashCode": -575980676,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.Random",
+        "Name": "BlazorWASM.Pages.MyList",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWASM.Pages.Random"
+            "TagName": "BlazorWASM.Pages.MyList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.Random",
+          "Common.TypeName": "BlazorWASM.Pages.MyList",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -451,35 +418,68 @@
         }
       },
       {
-        "HashCode": -2002302177,
+        "HashCode": 1340316945,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.MyList",
+        "Name": "BlazorWASM.Pages.Random",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "MyList"
+            "TagName": "Random"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.MyList"
+          "Common.TypeName": "BlazorWASM.Pages.Random"
         }
       },
       {
-        "HashCode": -575980676,
+        "HashCode": -1727480426,
         "Kind": "Components.Component",
-        "Name": "BlazorWASM.Pages.MyList",
+        "Name": "BlazorWASM.Pages.Random",
         "AssemblyName": "BlazorWASM",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorWASM.Pages.MyList"
+            "TagName": "BlazorWASM.Pages.Random"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorWASM.Pages.MyList",
+          "Common.TypeName": "BlazorWASM.Pages.Random",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1861840644,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Index",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Index"
+        }
+      },
+      {
+        "HashCode": -1330898695,
+        "Kind": "Components.Component",
+        "Name": "BlazorWASM.Pages.Index",
+        "AssemblyName": "BlazorWASM",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorWASM.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorWASM.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

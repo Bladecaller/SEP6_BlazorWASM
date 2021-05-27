@@ -140,14 +140,14 @@ using System.Net.Http;
             new KeyValuePair<string, string>("password",password),
     };
     content = new FormUrlEncodedContent(pairs);
-    HttpResponseMessage response = await client.PostAsync("http://ptsv2.com/t/fswvf-1622095185/post", content);
+    HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser/post", content);
     Console.WriteLine(content.ToString());
     string myResponse = await response.Content.ReadAsStringAsync();
-        if(myResponse == "Thank you for this dump. I hope you have a lovely day!"){
-            searchInput.displayName = "NO SUCH ACCOUNT";
-        } else{
+        //if(myResponse == "Thank you for this dump. I hope you have a lovely day!"){
+        //    searchInput.displayName = "NO SUCH ACCOUNT";
+        //} else{
             searchInput.displayName = myResponse;
-        }
+        //}
     Console.WriteLine(myResponse);
     }
 

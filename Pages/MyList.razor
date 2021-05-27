@@ -2,7 +2,60 @@
 @inject SingletonService searchInput
 @inject HttpClient client
 @using System.Net.Http
-<h1>My list</h1>
-
+<h1>MyList</h1>
+<button @onclick=@Refresh>Update List</button>
+@if (searchInput.searchInput == null)
+{
+    <p><em>Look for a movie via the search bar!</em></p>
+}
+else
+{
+    <td><button @onclick="RemoveFavorite">Remove from My List</button></td>
+    <table class="table">
+        <thead>
+            <tr style="color:antiquewhite">
+                <th>Title</th>
+                <th>Release date</th>
+                <th>Original language</th>
+                <th>Popularity</th>
+                <th>Remove</th>
+                <th>Poster</th>   
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (MovieItem movieItem in searchInput.favoritesList.ToList<MovieItem>()){
+                <tr style="color:antiquewhite">
+                    <td>@movieItem.Title</td>
+                    <td>@movieItem.release_Date</td>
+                    <td>@movieItem.original_language</td>
+                    <td>@movieItem.popularity</td>
+                    <td><input type="checkbox" @bind=@movieItem.notFavorite></td>
+                    <td><img src=@movieItem.fullImagePath alt="alternatetext" style="width:350px;height:400px;"></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 @code {
+    void RemoveFavorite(){
+        foreach(MovieItem tempItem in searchInput.favoritesList.ToList<MovieItem>()){
+            if(tempItem.notFavorite && searchInput.favoritesList.Contains(tempItem)){
+            searchInput.favoritesList.Remove(tempItem);
+            }
+        }
+    }
+
+    void Refresh()
+    {
+    StateHasChanged();
+    }
+
+    protected override void OnInitialized(){
+        foreach(MovieItem one in searchInput.favoritesList.ToList<MovieItem>()){
+            foreach(MovieItem two in searchInput.favoritesList.ToList<MovieItem>()){
+                if(one.Title == two.Title && one != two) searchInput.favoritesList.Remove(one);
+            }
+        }
+    }
+
 }

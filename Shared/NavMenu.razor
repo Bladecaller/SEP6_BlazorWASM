@@ -51,8 +51,8 @@
                 <a class="dropdown-item" href="#">Fuck</a>
             </div>
         </div>
-        <div>
-            <p>Display name = @searchInput.displayName</p>
+        <div> 
+            <p @onchange="Rerender">Display name = @searchInput.displayName</p>
             <p>adress = @client.BaseAddress</p>
             <input @bind="InputValue" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Is this working?">
         </div>

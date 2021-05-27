@@ -143,7 +143,11 @@ using System.Net.Http;
     HttpResponseMessage response = await client.PostAsync("http://ptsv2.com/t/fswvf-1622095185/post", content);
     Console.WriteLine(content.ToString());
     string myResponse = await response.Content.ReadAsStringAsync();
-    searchInput.displayName = myResponse;
+        if(myResponse == "Thank you for this dump. I hope you have a lovely day!"){
+            searchInput.displayName = "NO SUCH ACCOUNT";
+        } else{
+            searchInput.displayName = myResponse;
+        }
     Console.WriteLine(myResponse);
     }
 

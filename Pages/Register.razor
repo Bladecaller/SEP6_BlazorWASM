@@ -17,7 +17,7 @@
         <input @bind="displayName" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Display name">
     </li>
     <li>
-        <button @onclick=@Post>Register</button>
+        <button @onclick=@PostNow>Register</button>
     </li>
 </ul>
 
@@ -27,7 +27,7 @@
     public string displayName {get; set;}
     string stringPayload;
     HttpContent content;
-    async Task Post()
+    async Task PostNow()
     {
     IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
             new KeyValuePair<string, string>("username",username),

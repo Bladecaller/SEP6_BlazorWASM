@@ -4,7 +4,7 @@
 @inject HttpClient client
 @using System.Net.Http
 <h1>Movie</h1>
-<button @onclick=@Refresh>UpdateSearch</button>
+<button @onclick=@Refresh>UpdateSearch</button><td><button @onclick="ManageFavorites">Add to My List</button></td>
 @if (searchInput.searchInput == null)
 {
     <p><em>Look for a movie via the search bar!</em></p>
@@ -18,16 +18,19 @@ else
                 <th>Release date</th>
                 <th>Original language</th>
                 <th>Popularity</th>
-                <th>Poster</th>   
+                <th>Add</th>
+                <th>Poster</th> 
             </tr>
         </thead>
         <tbody>
-            @foreach (MovieItem movieItem in movies){
+            @foreach (MovieItem movieItem in movies.ToList<MovieItem>()){
                 <tr style="color:antiquewhite">
                     <td>@movieItem.Title</td>
                     <td>@movieItem.release_Date</td>
                     <td>@movieItem.original_language</td>
                     <td>@movieItem.popularity</td>
+                    <td><input type="checkbox" @bind=@movieItem.favorite></td>
+
                     <td><img src=@movieItem.fullImagePath alt="alternatetext" style="width:350px;height:400px;"></td>
                 </tr>
             }
@@ -36,30 +39,39 @@ else
 }
 
 @code {
-    async Task Refresh()
-    {
-        if(searchInput.searchInput != null ){
-        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.searchInput);
-        movies = root.results;
-        Console.WriteLine("Input is set to: " + searchInput.searchInput);
-            foreach (MovieItem movie in movies){
-                movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
-            }
-        }
-    StateHasChanged();
-    }
+    
     private string key = "72d7decec4b08474aef457cd18c51628";
     private Root root = new();
     private List<MovieItem> movies = new();
+    private bool checkedValue {get;set;}
     protected override async Task OnInitializedAsync()
     {
         if(searchInput.searchInput != null ){
         root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.searchInput);
         movies = root.results;
         Console.WriteLine("Input is set to: " + searchInput.searchInput);
-            foreach (MovieItem movie in movies){
+            foreach (MovieItem movie in movies.ToList<MovieItem>()){
                 movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             }
         }
+    }
+    private void ManageFavorites(){
+        foreach(MovieItem tempItem in movies.ToList<MovieItem>()){
+            if(tempItem.favorite && !searchInput.favoritesList.Contains(tempItem)){
+            searchInput.favoritesList.Add(tempItem);
+            }
+        }
+    }
+    async Task Refresh()
+    {
+        if(searchInput.searchInput != null ){
+        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.searchInput);
+        movies = root.results;
+        Console.WriteLine("Input is set to: " + searchInput.searchInput);
+            foreach (MovieItem movie in movies.ToList<MovieItem>()){
+                movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+            }
+        }
+    StateHasChanged();
     }
 }

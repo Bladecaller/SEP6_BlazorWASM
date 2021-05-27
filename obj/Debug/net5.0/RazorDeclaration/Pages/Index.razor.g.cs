@@ -140,7 +140,7 @@ using System.Net.Http;
             new KeyValuePair<string, string>("password",password),
     };
     content = new FormUrlEncodedContent(pairs);
-    HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser/post", content);
+    HttpResponseMessage response = await client.PostAsJsonAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser/post", content);
     Console.WriteLine(content.ToString());
     string myResponse = await response.Content.ReadAsStringAsync();
         //if(myResponse == "Thank you for this dump. I hope you have a lovely day!"){

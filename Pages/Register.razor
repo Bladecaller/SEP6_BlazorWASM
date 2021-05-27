@@ -7,14 +7,14 @@
 
 <h1>Register</h1>
 <ul>
+    <li>
+        <input @bind="displayName" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Display name">
+    </li>
     <li>        
         <input @bind="username" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Username">
     </li>
     <li>
         <input @bind="password" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Password">
-    </li>
-    <li>
-        <input @bind="displayName" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Display name">
     </li>
     <li>
         <button @onclick=@PostNow>Register</button>
@@ -30,15 +30,14 @@
     async Task PostNow()
     {
     IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
-            new KeyValuePair<string, string>("username",username),
+            new KeyValuePair<string, string>("display_name",displayName),
+            new KeyValuePair<string, string>("user_name",username),
             new KeyValuePair<string, string>("password",password),
-            new KeyValuePair<string, string>("displayName",displayName),
     };
     content = new FormUrlEncodedContent(pairs);
-    HttpResponseMessage response = await client.PostAsync("http://ptsv2.com/t/fswvf-1622095185/post", content);
+    HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser", content);
     Console.WriteLine(content.ToString());
     string myResponse = await response.Content.ReadAsStringAsync();
-    searchInput.displayName = myResponse;
     Console.WriteLine(myResponse);
     }
 }

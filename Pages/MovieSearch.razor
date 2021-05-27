@@ -4,7 +4,7 @@
 @inject HttpClient client
 @using System.Net.Http
 <h1>Movie</h1>
-<button @onclick=@Refresh>UpdateSearch</button><td><button @onclick="ManageFavorites">Add to My List</button></td>
+<button @onclick=@Refresh>UpdateSearch</button><button @onclick="ManageFavorites">Add to My List</button>
 @if (searchInput.searchInput == null)
 {
     <p><em>Look for a movie via the search bar!</em></p>
@@ -30,7 +30,6 @@ else
                     <td>@movieItem.original_language</td>
                     <td>@movieItem.popularity</td>
                     <td><input type="checkbox" @bind=@movieItem.favorite></td>
-
                     <td><img src=@movieItem.fullImagePath alt="alternatetext" style="width:350px;height:400px;"></td>
                 </tr>
             }
@@ -55,7 +54,29 @@ else
             }
         }
     }
-    private void ManageFavorites(){
+    /*
+    private  async Task ManageFavorites(){
+        foreach(MovieItem tempItem in movies.ToList<MovieItem>()){
+            if(tempItem.favorite && !searchInput.favoritesList.Contains(tempItem)){
+            searchInput.favoritesList.Add(tempItem);
+            
+            IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
+                new KeyValuePair<string, string>("title",tempItem.Title),
+                new KeyValuePair<string, string>("release_date",tempItem.release_Date),
+                new KeyValuePair<string, string>("original_language",tempItem.original_language),
+                new KeyValuePair<string, string>("popularity" ,tempItem.popularity.ToString()),
+                new KeyValuePair<string, string>("full_poster_path" ,tempItem.fullImagePath),
+                new KeyValuePair<string, string>("user_name" ,searchInput.username),
+            };
+            HttpContent content = new FormUrlEncodedContent(pairs);
+            HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser", content);
+            string myResponse = await response.Content.ReadAsStringAsync();
+            searchInput.displayName = myResponse;
+            Console.WriteLine(myResponse);
+            }
+        }
+        */
+    private  void ManageFavorites(){
         foreach(MovieItem tempItem in movies.ToList<MovieItem>()){
             if(tempItem.favorite && !searchInput.favoritesList.Contains(tempItem)){
             searchInput.favoritesList.Add(tempItem);

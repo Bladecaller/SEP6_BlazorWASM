@@ -17,8 +17,12 @@ namespace BlazorWASM
             builder.Services.AddSingleton<SingletonService>(new SingletonService{favoritesList = new List<MovieItem>()});
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddCors(policy =>{
-                policy.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+                policy.AddDefaultPolicy(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             });
+            builder.Services.AddCors(options => {
+                options.AddDefaultPolicy(builder => 
+                builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+            }); 
             await builder.Build().RunAsync();
         }
     }

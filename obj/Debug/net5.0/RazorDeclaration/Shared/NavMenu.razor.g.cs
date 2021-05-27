@@ -111,9 +111,16 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
+#line 63 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
        
     public string InputValue { get; set; }
+
+    public string IndexPath {get; set;}
+    public string registerPath {get; set;}
+    public string moviePath {get; set;}
+    public string actorPath {get; set;}
+    public string myListPath {get; set;}
+    public string randomPath {get; set;}
     private bool collapseNavMenu = true;
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
@@ -121,14 +128,36 @@ using Microsoft.AspNetCore.Components.Authorization;
     {
         collapseNavMenu = !collapseNavMenu;
     }
+    private void Rerender(){
+        StateHasChanged();
+    }
     private void SetValue(){
-        searchInput.SetSearchInput(InputValue);
-        Console.WriteLine("Value has been set to " + searchInput.GetSearchInput());
+        searchInput.searchInput = InputValue;
+        Console.WriteLine("Value has been set to " + searchInput.searchInput);
+    }
+    protected override void OnInitialized(){
+        Uri localHost = new Uri("https://localhost:5001/");
+        if(client.BaseAddress == localHost ){
+            IndexPath = "/";
+            registerPath = "/register";
+            moviePath = "/movieSearch";
+            actorPath = "/actorSearch";
+            myListPath = "/myList";
+            randomPath = "/random";
+        } else{
+            IndexPath = "/SEP6_BlazorWASM/";
+            registerPath = "/SEP6_BlazorWASM/register";
+            moviePath = "/SEP6_BlazorWASM/movieSearch";
+            actorPath = "/SEP6_BlazorWASM/actorSearch";
+            myListPath = "/SEP6_BlazorWASM/myList";
+            randomPath = "/SEP6_BlazorWASM/random";
+        }
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient client { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private SingletonService searchInput { get; set; }
     }
 }

@@ -5,7 +5,7 @@
 @using System.Net.Http
 <h1>Movie</h1>
 <button @onclick=@Refresh>UpdateSearch</button>
-@if (searchInput.GetSearchInput() == null)
+@if (searchInput.searchInput == null)
 {
     <p><em>Look for a movie via the search bar!</em></p>
 }
@@ -38,10 +38,10 @@ else
 @code {
     async Task Refresh()
     {
-        if(searchInput.GetSearchInput() != null ){
-        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.GetSearchInput());
+        if(searchInput.searchInput != null ){
+        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.searchInput);
         movies = root.results;
-        Console.WriteLine("Input is set to: " + searchInput.GetSearchInput());
+        Console.WriteLine("Input is set to: " + searchInput.searchInput);
             foreach (MovieItem movie in movies){
                 movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             }
@@ -53,10 +53,10 @@ else
     private List<MovieItem> movies = new();
     protected override async Task OnInitializedAsync()
     {
-        if(searchInput.GetSearchInput() != null ){
-        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.GetSearchInput());
+        if(searchInput.searchInput != null ){
+        root = await client.GetFromJsonAsync<Root>("https://api.themoviedb.org/3/search/movie?api_key="+ key + "&query=" + searchInput.searchInput);
         movies = root.results;
-        Console.WriteLine("Input is set to: " + searchInput.GetSearchInput());
+        Console.WriteLine("Input is set to: " + searchInput.searchInput);
             foreach (MovieItem movie in movies){
                 movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             }

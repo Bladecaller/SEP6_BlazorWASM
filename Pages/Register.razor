@@ -3,9 +3,9 @@
 @using System.Net.Http.Headers
 @inject SingletonService searchInput
 @using System.Net.Http
-@page "/"
+@page "/register"
 
-<h1>Log in</h1>
+<h1>Register</h1>
 <ul>
     <li>        
         <input @bind="username" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Username">
@@ -14,15 +14,17 @@
         <input @bind="password" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Password">
     </li>
     <li>
-        <button @onclick=@Post>Login</button>
+        <input @bind="displayName" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Display name">
+    </li>
+    <li>
+        <button @onclick=@Post>Register</button>
     </li>
 </ul>
 
 @code{
-@code{
     public string username {get; set;}
     public string password {get; set;}
-
+    public string displayName {get; set;}
     string stringPayload;
     HttpContent content;
     async Task Post()
@@ -30,6 +32,7 @@
     IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
             new KeyValuePair<string, string>("username",username),
             new KeyValuePair<string, string>("password",password),
+            new KeyValuePair<string, string>("displayName",displayName),
     };
     content = new FormUrlEncodedContent(pairs);
     HttpResponseMessage response = await client.PostAsync("http://ptsv2.com/t/fswvf-1622095185/post", content);
@@ -38,5 +41,4 @@
     searchInput.displayName = myResponse;
     Console.WriteLine(myResponse);
     }
-}
 }

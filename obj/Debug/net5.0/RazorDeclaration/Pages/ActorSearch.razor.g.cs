@@ -116,8 +116,8 @@ using System.Net.Http;
        
     async Task Refresh()
     {
-        if(actorInput.GetSearchInput() != null ){
-        groot = await client.GetFromJsonAsync<Groot>("https://api.themoviedb.org/3/search/person?api_key="+ apiKey + "&query=" + actorInput.GetSearchInput());
+        if(actorInput.searchInput != null ){
+        groot = await client.GetFromJsonAsync<Groot>("https://api.themoviedb.org/3/search/person?api_key="+ apiKey + "&query=" + actorInput.searchInput);
         actors = groot.results;
         }
     StateHasChanged();
@@ -128,9 +128,9 @@ using System.Net.Http;
     private IEnumerable<ActorItem> actors;
     protected override async Task OnInitializedAsync()
     {
-        if (actorInput.GetSearchInput() != null)
+        if (actorInput.searchInput != null)
         {
-            groot = await client.GetFromJsonAsync<Groot>("https://api.themoviedb.org/3/search/person?api_key="+ apiKey +"&query=" + actorInput.GetSearchInput());
+            groot = await client.GetFromJsonAsync<Groot>("https://api.themoviedb.org/3/search/person?api_key="+ apiKey +"&query=" + actorInput.searchInput);
             actors = groot.results;
         }
     }

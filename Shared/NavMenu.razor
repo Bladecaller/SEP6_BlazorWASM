@@ -1,6 +1,7 @@
 ﻿@inject SingletonService searchInput
+@inject HttpClient client
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="/SEP6_BlazorWASM/"><svg height="130" width="185">
+    <a @onclick="Rerender" class="navbar-brand" href=@IndexPath><svg height="130" width="185">
     <defs>
         <linearGradient id="grad1" x1="0%" y1="100%" x2="100%" y2="50%">
             <stop offset="0%" style="stop-color:rgb(198 13 13);" />
@@ -15,22 +16,27 @@
     </button>
     <div class="@NavMenuCssClass navbar-collapse">
         <a style="color:rebeccapurple"
-            <NavLink class="nav-link" href="/SEP6_BlazorWASM/movieSearch" Match="NavLinkMatch.All">
+            <NavLink @onclick="Rerender" class="nav-link" href=@registerPath Match="NavLinkMatch.All">
+                <span class="oi oi-monitor" style="color:red" aria-hidden="true"></span> <span style="color:red">Register</span>
+            </NavLink>
+        </a>
+        <a style="color:rebeccapurple"
+            <NavLink @onclick="Rerender" class="nav-link" href=@moviePath Match="NavLinkMatch.All">
                 <span class="oi oi-monitor" style="color:red" aria-hidden="true"></span> <span style="color:red">Movies</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="/SEP6_BlazorWASM/random">
+            <NavLink @onclick="Rerender" class="nav-link" href=@randomPath>
                 <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Random</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="/SEP6_BlazorWASM/myList">
+            <NavLink @onclick="Rerender" class="nav-link" href=@myListPath>
                <span class="oi oi-list-rich"style="color:red" aria-hidden="true"></span> <span style="color:red">My list</span>
             </NavLink>
         </a>
         <a
-            <NavLink class="nav-link" href="/SEP6_BlazorWASM/actorSearch">
+            <NavLink @onclick="Rerender" class="nav-link" href=@actorPath>
                 <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Actors</span>
             </NavLink>
         </a>
@@ -46,6 +52,8 @@
             </div>
         </div>
         <div>
+            <p>Display name = @searchInput.displayName</p>
+            <p>adress = @client.BaseAddress</p>
             <input @bind="InputValue" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Is this working?">
         </div>
             <button @onclick="SetValue" class="btn btn-outline-light my-2 my-sm-3" type="submit">Find</button>
@@ -54,6 +62,13 @@
 
 @code {
     public string InputValue { get; set; }
+
+    public string IndexPath {get; set;}
+    public string registerPath {get; set;}
+    public string moviePath {get; set;}
+    public string actorPath {get; set;}
+    public string myListPath {get; set;}
+    public string randomPath {get; set;}
     private bool collapseNavMenu = true;
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
@@ -61,8 +76,29 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
+    private void Rerender(){
+        StateHasChanged();
+    }
     private void SetValue(){
-        searchInput.SetSearchInput(InputValue);
-        Console.WriteLine("Value has been set to " + searchInput.GetSearchInput());
+        searchInput.searchInput = InputValue;
+        Console.WriteLine("Value has been set to " + searchInput.searchInput);
+    }
+    protected override void OnInitialized(){
+        Uri localHost = new Uri("https://localhost:5001/");
+        if(client.BaseAddress == localHost ){
+            IndexPath = "/";
+            registerPath = "/register";
+            moviePath = "/movieSearch";
+            actorPath = "/actorSearch";
+            myListPath = "/myList";
+            randomPath = "/random";
+        } else{
+            IndexPath = "/SEP6_BlazorWASM/";
+            registerPath = "/SEP6_BlazorWASM/register";
+            moviePath = "/SEP6_BlazorWASM/movieSearch";
+            actorPath = "/SEP6_BlazorWASM/actorSearch";
+            myListPath = "/SEP6_BlazorWASM/myList";
+            randomPath = "/SEP6_BlazorWASM/random";
+        }
     }
 }

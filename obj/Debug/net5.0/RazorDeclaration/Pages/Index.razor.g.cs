@@ -126,32 +126,25 @@ using System.Net.Http;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 19 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
+#line 22 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Pages\Index.razor"
       
-    MovieItem movie;
+    public string username {get; set;}
+    public string password {get; set;}
 
     string stringPayload;
     HttpContent content;
-    async Task Refresh()
+    async Task Post()
     {
-     HttpResponseMessage response = await client.PostAsync("https://ptsv2.com/t/nrph0-1622069235/post", content);
-     var myResponse = await response.Content.ReadAsStringAsync();
-     Console.WriteLine(myResponse);
-     }
-    
-    protected override void OnInitialized()
-    {
-        movie = new MovieItem{   
-        Title = "movie title",
-        release_Date = "Vchera",
-        original_language = "english",
-        popularity = 3.1,
-        poster_path = "path",
-        fullImagePath = "fullPath",
-        PersonalRate = 2
-        };
-        stringPayload = JsonConvert.SerializeObject(movie);
-        content = new StringContent(stringPayload);
+    IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
+            new KeyValuePair<string, string>("username",username),
+            new KeyValuePair<string, string>("password",password),
+    };
+    content = new FormUrlEncodedContent(pairs);
+    HttpResponseMessage response = await client.PostAsync("http://ptsv2.com/t/fswvf-1622095185/post", content);
+    Console.WriteLine(content.ToString());
+    string myResponse = await response.Content.ReadAsStringAsync();
+    searchInput.displayName = myResponse;
+    Console.WriteLine(myResponse);
     }
 
 #line default

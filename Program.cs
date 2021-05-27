@@ -20,10 +20,6 @@ namespace BlazorWASM
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddCors(policy =>{
                 policy.AddDefaultPolicy(builder => builder.AllowAnyOrigin());
-           // policy.AddPolicy("https://ptsv2.com/t/nrph0-1622069235", builder => builder.AllowAnyOrigin()
-           // .AllowAnyMethod()
-           // .AllowAnyHeader()
-           // .AllowCredentials());
             });
             await builder.Build().RunAsync();
         }

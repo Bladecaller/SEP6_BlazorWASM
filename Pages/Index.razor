@@ -24,19 +24,30 @@
     public string username {get; set;}
     public string password {get; set;}
 
-    string stringPayload;
+    //string stringPayload;
     HttpContent content;
     async Task Post()
     {
+    List<char> charsToRemove = new List<char>() { '(', ')', ',', '"',' '};
     IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
             new KeyValuePair<string, string>("user_name",username),
             new KeyValuePair<string, string>("password",password),
     };
+
     content = new FormUrlEncodedContent(pairs);
-    HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser", content);
+
+    HttpResponseMessage response = await client.PostAsync("https://europe-central2-userservice-314812.cloudfunctions.net/login", content);
+    
     string myResponse = await response.Content.ReadAsStringAsync();
-    searchInput.displayName = myResponse;
-    searchInput.username = username;
-    Console.WriteLine(myResponse);
+    myResponse = JsonConvert.DeserializeObject<string>(myResponse);
+    myResponse = String.Concat(myResponse.Split(charsToRemove.ToArray()));
+        if (myResponse.ToString() == "Userfailedtologin"){
+            searchInput.displayName = "No such user";
+            Console.WriteLine("No such user");
+        } else{
+            searchInput.displayName = String.Concat(myResponse.Split(charsToRemove.ToArray()));
+            searchInput.username = username;
+            Console.WriteLine("Username set to: " + searchInput.username);
+        }
     }
 }

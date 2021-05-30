@@ -123,7 +123,7 @@ using System.Net.Http;
     StateHasChanged();
     }
     private string apiKey = "72d7decec4b08474aef457cd18c51628";
-    private ActorItem actor;
+    //private ActorItem actor;
     private Groot groot;
     private IEnumerable<ActorItem> actors;
     protected override async Task OnInitializedAsync()

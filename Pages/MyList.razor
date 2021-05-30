@@ -36,10 +36,19 @@ else
     </table>
 }
 @code {
-    void RemoveFavorite(){
+    async Task RemoveFavorite(){
         foreach(MovieItem tempItem in searchInput.favoritesList.ToList<MovieItem>()){
             if(tempItem.notFavorite && searchInput.favoritesList.Contains(tempItem)){
-            searchInput.favoritesList.Remove(tempItem);
+
+            IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
+            new KeyValuePair<string, string>("title",tempItem.Title),
+            };
+            HttpContent content = new FormUrlEncodedContent(pairs);
+            HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser", content);
+            string myResponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(myResponse);
+            searchInput.favoritesList = await client.GetFromJsonAsync<List<MovieItem>>("https://us-central1-userservice-314812.cloudfunctions.net/createUser");
+            StateHasChanged();
             }
         }
     }
@@ -49,6 +58,11 @@ else
     StateHasChanged();
     }
 
+    protected override async Task OnInitializedAsync(){
+        searchInput.favoritesList = await client.GetFromJsonAsync<List<MovieItem>>("https://us-central1-userservice-314812.cloudfunctions.net/createUser");
+        Console.WriteLine(searchInput.favoritesList.ToString());
+    }
+    /*
     protected override void OnInitialized(){
         foreach(MovieItem one in searchInput.favoritesList.ToList<MovieItem>()){
             foreach(MovieItem two in searchInput.favoritesList.ToList<MovieItem>()){
@@ -56,5 +70,15 @@ else
             }
         }
     }
+
+    void RemoveFavorite(){
+        foreach(MovieItem tempItem in searchInput.favoritesList.ToList<MovieItem>()){
+            if(tempItem.notFavorite && searchInput.favoritesList.Contains(tempItem)){
+            searchInput.favoritesList.Remove(tempItem);
+            }
+        }
+    }
+    */
+
 
 }

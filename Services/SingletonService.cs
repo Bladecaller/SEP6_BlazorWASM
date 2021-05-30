@@ -11,4 +11,5 @@ public class SingletonService{
 
     public string username {get; set;}
     public List<MovieItem> favoritesList {get; set;}
+    
 }

@@ -4,7 +4,6 @@
 @inject SingletonService searchInput
 @using System.Net.Http
 @page "/register"
-
 <h1>Register</h1>
 <ul>
     <li>
@@ -17,17 +16,16 @@
         <input @bind="password" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Password">
     </li>
     <li>
-        <button @onclick=@PostNow>Register</button>
+        <button @onclick=@Post>Register</button>
     </li>
 </ul>
-
 @code{
     public string username {get; set;}
     public string password {get; set;}
     public string displayName {get; set;}
-    string stringPayload;
+    //string stringPayload;
     HttpContent content;
-    async Task PostNow()
+    public async Task Post()
     {
     IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
             new KeyValuePair<string, string>("display_name",displayName),

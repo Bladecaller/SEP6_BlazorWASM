@@ -54,11 +54,11 @@ else
             }
         }
     }
-    /*
+    
     private  async Task ManageFavorites(){
         foreach(MovieItem tempItem in movies.ToList<MovieItem>()){
             if(tempItem.favorite && !searchInput.favoritesList.Contains(tempItem)){
-            searchInput.favoritesList.Add(tempItem);
+           //searchInput.favoritesList.Add(tempItem);
             
             IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
                 new KeyValuePair<string, string>("title",tempItem.Title),
@@ -71,11 +71,11 @@ else
             HttpContent content = new FormUrlEncodedContent(pairs);
             HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser", content);
             string myResponse = await response.Content.ReadAsStringAsync();
-            searchInput.displayName = myResponse;
             Console.WriteLine(myResponse);
             }
         }
-        */
+    }
+    /*
     private  void ManageFavorites(){
         foreach(MovieItem tempItem in movies.ToList<MovieItem>()){
             if(tempItem.favorite && !searchInput.favoritesList.Contains(tempItem)){
@@ -83,6 +83,7 @@ else
             }
         }
     }
+    */
     async Task Refresh()
     {
         if(searchInput.searchInput != null ){

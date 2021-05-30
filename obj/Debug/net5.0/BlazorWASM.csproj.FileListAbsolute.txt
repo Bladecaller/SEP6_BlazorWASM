@@ -633,8 +633,6 @@ C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Shared\Test.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\Pages\MyList.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\MyList.razor.g.cs
-C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\Pages\Random.razor.g.cs
-C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\Random.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
 C:\Users\Borislav\Documents\Blazor\BlazorWASM\obj\Debug\net5.0\RazorDeclaration\Pages\MovieSearch.razor.g.cs

@@ -30,7 +30,7 @@ else
                     <td>@movieItem.original_language</td>
                     <td>@movieItem.popularity</td>
                     <td><input type="checkbox" @bind=@movieItem.favorite></td>
-                    <td><img src=@movieItem.fullImagePath alt="alternatetext" style="width:350px;height:400px;"></td>
+                    <td><img src=@movieItem.full_poster_path alt="alternatetext" style="width:350px;height:400px;"></td>
                 </tr>
             }
         </tbody>
@@ -50,30 +50,35 @@ else
         movies = root.results;
         Console.WriteLine("Input is set to: " + searchInput.searchInput);
             foreach (MovieItem movie in movies.ToList<MovieItem>()){
-                movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+                movie.full_poster_path = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             }
         }
     }
     
     private  async Task ManageFavorites(){
+        if(searchInput.username != null){
+        List<char> charsToRemove = new List<char>() { ':'};
         foreach(MovieItem tempItem in movies.ToList<MovieItem>()){
             if(tempItem.favorite && !searchInput.favoritesList.Contains(tempItem)){
            //searchInput.favoritesList.Add(tempItem);
-            
+           tempItem.Title = String.Concat(tempItem.Title.Split(charsToRemove.ToArray()));
             IEnumerable<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string,string>>(){
                 new KeyValuePair<string, string>("title",tempItem.Title),
                 new KeyValuePair<string, string>("release_date",tempItem.release_Date),
                 new KeyValuePair<string, string>("original_language",tempItem.original_language),
                 new KeyValuePair<string, string>("popularity" ,tempItem.popularity.ToString()),
-                new KeyValuePair<string, string>("full_poster_path" ,tempItem.fullImagePath),
+                new KeyValuePair<string, string>("full_poster_path" ,tempItem.full_poster_path),
                 new KeyValuePair<string, string>("user_name" ,searchInput.username),
             };
             HttpContent content = new FormUrlEncodedContent(pairs);
-            HttpResponseMessage response = await client.PostAsync("https://us-central1-userservice-314812.cloudfunctions.net/createUser", content);
+            HttpResponseMessage response = await client.PostAsync("https://europe-central2-userservice-314812.cloudfunctions.net/addMovie", content);
             string myResponse = await response.Content.ReadAsStringAsync();
             Console.WriteLine(myResponse);
             }
         }
+    }else{
+        Console.WriteLine("Login first");
+    }
     }
     /*
     private  void ManageFavorites(){
@@ -91,7 +96,7 @@ else
         movies = root.results;
         Console.WriteLine("Input is set to: " + searchInput.searchInput);
             foreach (MovieItem movie in movies.ToList<MovieItem>()){
-                movie.fullImagePath = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+                movie.full_poster_path = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             }
         }
     StateHasChanged();

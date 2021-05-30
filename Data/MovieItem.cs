@@ -6,7 +6,7 @@ public class MovieItem
     public string original_language {get; set; }
     public double popularity {get; set;}
     public string poster_path {get; set;}
-    public string fullImagePath {get; set;}
+    public string full_poster_path {get; set;}
     public bool favorite {get; set; }
     public bool notFavorite {get; set; }
 

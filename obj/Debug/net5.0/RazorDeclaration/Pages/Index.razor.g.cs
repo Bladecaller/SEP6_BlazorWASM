@@ -165,6 +165,7 @@ using System.Net.Http;
         if (myResponse.ToString() == "Userfailedtologin"){
             searchInput.displayName = "No such user";
             Console.WriteLine("No such user");
+
         } else{
             searchInput.displayName = String.Concat(myResponse.Split(charsToRemove.ToArray()));
             searchInput.username = username;

@@ -111,7 +111,7 @@ using Microsoft.AspNetCore.Components.Authorization;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 62 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
+#line 57 "C:\Users\Borislav\Documents\Blazor\BlazorWASM\Shared\NavMenu.razor"
        
     public string InputValue { get; set; }
 

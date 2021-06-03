@@ -4,12 +4,12 @@
     <a @onclick="Rerender" class="navbar-brand" href=@IndexPath><svg height="130" width="185">
     <defs>
         <linearGradient id="grad1" x1="0%" y1="100%" x2="100%" y2="50%">
-            <stop offset="0%" style="stop-color:rgb(198 13 13);" />
-            <stop offset="100%" style="stop-color:rgb(251 239 16);" />
+            <stop offset="0%" style="stop-color:rgb(0 0 0);" />
+            <stop offset="100%" style="stop-color:red;" />
         </linearGradient>
     </defs>
     <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-    <text fill="#ffffff" font-size="25" font-family="Verdana" x="50" y="86">Group 9</text>
+    <text fill="#ffffff" font-size="25" font-family="Verdana" x="50" y="76">Group 9</text>
 </svg></a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -35,22 +35,15 @@
                 <span class="oi oi-star" style="color:red" aria-hidden="true"></span> <span style="color:red">Actors</span>
             </NavLink>
         </a>
-        <div class="dropdown show">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button">
-                Genre
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Drama</a>
-                <a class="dropdown-item" href="#">Comedy</a>
-                <a class="dropdown-item" href="#">Fuck</a>
-            </div>
-        </div>
-        <div> 
-            <p @onchange="Rerender">Display name = @searchInput.displayName</p>
+
+        <div style="margin-bottom: 30px">
+            <a style="color: antiquewhite" @onchange="Rerender">  Display name = @searchInput.displayName</a>
             <input @bind="InputValue" @bind:event="oninput" class="form-control mr-sm-2" type="search" placeholder="Is this working?">
+
         </div>
-            <button @onclick="SetValue" class="btn btn-outline-light my-2 my-sm-3" type="submit">Find</button>
+        <div style="margin-bottom: 6px"
+        <button @onclick="SetValue" class="btn btn-outline-light my-2 my-sm-3 " type="submit">Find</button>
+        </div>
     </div>
 </nav>
 
